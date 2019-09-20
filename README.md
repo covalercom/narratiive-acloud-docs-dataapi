@@ -1,6 +1,6 @@
 # Narratiive Public Data API
 
-Narratiive Public Data API provides access to Narratiive Data through RESTful API.
+Narratiive Public Data API provides access to Narratiive Data through HTTP requests.
 
 ## Terminology
 
@@ -23,7 +23,9 @@ For example, we can say:
 
 Data Parameters is the description to express the filters/time span/splits we use in requesting data. 
 
-A Data Parameters contains information quite similar to the "Query" used in the Narratiive Dashboard, but less. It is mainly just the "Criteria" you picked in the query builder in the right sidebar. 
+A Data Parameters contains information quite similar to the "Query" used in the Narratiive Dashboard, but less. It is mainly just the "Criteria" you picked in the query builder in the right sidebar:
+
+![](https://user-images.githubusercontent.com/499870/65303077-4d624380-dbc0-11e9-854c-335f2213ecd8.png)
 
 
 For example, we will ask people: 
@@ -33,7 +35,7 @@ For example, we will ask people:
  
 ## How Does It Work
 
-We provide two http APIs (We will cover them in the later sections) to help you get data from Narratiive, follow the steps below:
+We provide several [http APIs](/#Endpoints) to help you get data from Narratiive, follow the steps below:
 
 - Step1: Create A Data Request
     - Use our API to create a new data request with your specified data parameters, you will get the newly created data request id from the response.
@@ -43,13 +45,15 @@ We provide two http APIs (We will cover them in the later sections) to help you 
     
 ## API Authentication
 
-The Public API uses secret token generated for each user (any permission check or restriction should follow its team setting) to do the authentication.
+The Public API uses secret token generated for each user to do the authentication.
  
 ### Get Your Token
 
-Users should be able to get their token from the dashboard (`My Settings -> Public Data API`):
+Users should be able to get their token from the dashboard "My Settings" page:
 
-[!img](xxxx)
+![](https://user-images.githubusercontent.com/499870/65302752-70d8be80-dbbf-11e9-818e-5aae18999a1a.png)
+
+![](https://user-images.githubusercontent.com/499870/65302800-94036e00-dbbf-11e9-8b5c-88ebb83cc940.png)
 
 If you can not find the setting, please contact our customer service for help.
 
@@ -71,8 +75,8 @@ If authentication fails, a HTTP code 403 will be returned.
 - URL: `https://api.narratiive.com/public_api/data_requests`
 - Method: `POST` 
 - Parameters: 
-    - `parameters`: string (a JSON string), required. See Data Request Builder about how to get the parameters. 
-- Response: Same as "Data Request Response" in the Get Data Request Result API section.
+    - `parameters`: string (a JSON string), required. See [Compose Data Parameters](/#Compose-Data-Parameters) about how to get the parameters. 
+- Response: Same as [Data Request Response](/#Data-Request-Response).
 
 #### Example:
 
@@ -222,3 +226,5 @@ The maximum concurrent data requests at the moment is 5 for each team.
 The easiest way to compose your data parameters is to use the Narratiive Dashboard query page as the Data Request Builder.
 
 Use the query builder as you use it normally, after you picked all the filters and other criteria you want, open the "Public Data API" tab on the right sidebar, the `parameters` in the Curl command will be the parameters you need. 
+
+![](https://user-images.githubusercontent.com/499870/65302899-e0e74480-dbbf-11e9-847e-98e661937600.png)
