@@ -25,7 +25,7 @@ Data Parameters is the description to express the filters/time span/splits we us
 
 A Data Parameters contains information quite similar to the "Query" used in the Narratiive Dashboard, but less. It is mainly just the "Criteria" you picked in the query builder in the right sidebar:
 
-![](https://user-images.githubusercontent.com/499870/65303077-4d624380-dbc0-11e9-854c-335f2213ecd8.png)
+<img src="https://user-images.githubusercontent.com/499870/65303077-4d624380-dbc0-11e9-854c-335f2213ecd8.png" width=300 />
 
 
 For example, we will ask people: 
@@ -35,7 +35,7 @@ For example, we will ask people:
  
 ## How Does It Work
 
-We provide several [http APIs](/#Endpoints) to help you get data from Narratiive, follow the steps below:
+We provide several [http APIs](#endpoints) to help you get data from Narratiive, follow the steps below:
 
 - Step1: Create A Data Request
     - Use our API to create a new data request with your specified data parameters, you will get the newly created data request id from the response.
@@ -49,11 +49,11 @@ The Public API uses secret token generated for each user to do the authenticatio
  
 ### Get Your Token
 
-Users should be able to get their token from the dashboard "My Settings" page:
+Users should be able to get their token from the dashboard [My Settings](https://app.narratiive.com/settings/my_settings) page:
 
-![](https://user-images.githubusercontent.com/499870/65302752-70d8be80-dbbf-11e9-818e-5aae18999a1a.png)
+<img src="https://user-images.githubusercontent.com/499870/65302752-70d8be80-dbbf-11e9-818e-5aae18999a1a.png" width=300 />
 
-![](https://user-images.githubusercontent.com/499870/65302800-94036e00-dbbf-11e9-8b5c-88ebb83cc940.png)
+<img src="https://user-images.githubusercontent.com/499870/65302800-94036e00-dbbf-11e9-8b5c-88ebb83cc940.png" width=300 />
 
 If you can not find the setting, please contact our customer service for help.
 
@@ -75,8 +75,8 @@ If authentication fails, a HTTP code 403 will be returned.
 - URL: `https://api.narratiive.com/public_api/data_requests`
 - Method: `POST` 
 - Parameters: 
-    - `parameters`: string (a JSON string), required. See [Compose Data Parameters](/#Compose-Data-Parameters) about how to get the parameters. 
-- Response: Same as [Data Request Response](/#Data-Request-Response).
+    - `parameters`: string (a JSON string), required. See [Compose Data Parameters](/#compose-data-parameters) about how to get the parameters. 
+- Response: Same as [Data Request Response](/#data-request-response).
 
 #### Example:
 
@@ -227,4 +227,5 @@ The easiest way to compose your data parameters is to use the Narratiive Dashboa
 
 Use the query builder as you use it normally, after you picked all the filters and other criteria you want, open the "Public Data API" tab on the right sidebar, the `parameters` in the Curl command will be the parameters you need. 
 
-![](https://user-images.githubusercontent.com/499870/65302899-e0e74480-dbbf-11e9-847e-98e661937600.png)
+<img src="https://user-images.githubusercontent.com/499870/65302899-e0e74480-dbbf-11e9-847e-98e661937600.png" width=300 />
+
