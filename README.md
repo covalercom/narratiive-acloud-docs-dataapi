@@ -1,6 +1,6 @@
-# Narratiive Public Data API
+# Narratiive Enterprise Data API
 
-Narratiive Public Data API provides access to Narratiive Data through HTTP requests.
+Narratiive Enterprise Data API provides access to Narratiive Data through HTTP requests.
 
 ## Terminology
 
@@ -225,7 +225,7 @@ The maximum concurrent data requests at the moment is 5 for each team.
 
 The easiest way to compose your data parameters is to use the Narratiive Dashboard query page as the Data Request Builder.
 
-Use the query builder as you use it normally, after you picked all the filters and other criteria you want, open the "Public Data API" tab on the right sidebar, the `parameters` in the Curl command will be the parameters you need. 
+Use the query builder as you use it normally, after you picked all the filters and other criteria you want, open the "Enterprise Data API" tab on the right sidebar (The tab will only shows up if your have generated your token), the `parameters` in the Curl command will be the parameters you need. 
 
 <img src="https://user-images.githubusercontent.com/499870/65302899-e0e74480-dbbf-11e9-847e-98e661937600.png" width=300 />
 
